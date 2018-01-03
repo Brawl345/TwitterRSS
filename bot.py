@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import atexit
+import html
 import logging
 import re
 import sched
@@ -156,7 +157,7 @@ def get_texts(feed_url):
             post_title = 'New entry'
         else:
             post_title = remove_html_tags(entry['title']).strip()
-            post_title = post_title.replace('<', '&lt;').replace('>', '&gt;')
+            post_title = html.unescape(post_title)
         if 'link' not in entry:
             post_link = data.link
         else:
