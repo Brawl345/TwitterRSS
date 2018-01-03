@@ -1,0 +1,6 @@
+[DEFAULT]
+consumer_key = CONSUMERKEY
+consumer_secret = CONSUMERSECRET
+access_token = ACCESS-TOKEN
+access_token_secret = ACCESSTOKENSECRET
+feeds = ["https://lorem-rss.herokuapp.com/feed"]
